@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<!--
+	CIS166AA: Case Project
+	Author: Kevin Ward
+	Date: 11/30/2016
+	Filename: form.html
+	-->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<title>Kevin Ward's Case Project</title>
+		<link rel="stylesheet" href="styles.css">
+		<!-- Adding modernizr JavaScript link. -->
+		<script src="modernizr.custom.05819.js"></script>
+		<script src="modernizr.custom.65897.js"></script>
+	</head>
+	<body>
+		<div id="mainbody">
+			<header>
+				<h1>
+					<a href="index.html"><img src="images/title.jpg" width="200" height="120" alt="Kevin's Hobbies" title="" id="logo1"></a>
+					<img src="images/hyrulecrest.png" width="200" height="120" alt="Kevin's Hobbies" title="" id="logo2">
+					<p>Kevin's Home Page</p>
+				</h1>
+			</header>
+			
+			<nav>
+				<ul class="mainmenu">
+					<li><p><a href="#">Fun Stuff</a></p>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="dbzpl.html">DBZ PwrLvl</a></li>
+							<li><a href="docwho.html">Doctor Who</a></li>
+							<li><a href="vgm.html">Games & Movies</a></li>
+							<li><a href="realm.html">WoW Realm List</a></li>
+							<li><a href="time.html">TARDIS Entry</a></li>
+						</ul>
+					</li>
+					<li><p>Forms & Documents</p>
+						<ul>
+							<li><a href="feedback.html">Feedback</a></li>
+							<li><a href="geoloc.html">GeoLocate</a></li>
+							<li id="currpage"><a href="form.html">Random Form</a></li>
+							<li><a href="websec.html">Web Security</a></li>
+							<li><a href="about.html">About Me</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		
+		<aside>
+			<ul>
+				<li><p>Random Form: <span id="randomform"></span></p></li>
+				<li><div id="errorText"></div></li>
+				<li><img src="images/pixel.png" width="240" height="190" alt="Error Picture" title="Error Picture" id="errorPic"></li>
+				<!--<li><img src="images/pixel.png" id="errorPic"></li>-->
+			</ul>
+		</aside>
+		
+		<article>			
+			<div>
+			<form action="formdone.html" novalidate="novalidate">
+				<fieldset id="datamine">
+				<legend><h2><span>Order Form</span></h2></legend><br>
+					
+					<fieldset id="names" class="text">
+					<p><legend>Full Name section</legend></p>
+					<p><label for="fname">First Name:</label><br>
+					<input type="textbox" id="fname" name="FirstName" placeholder="Enter first name:" required autofocus>
+					<br><br>
+					
+					<label for="lname">Last Name:</label><br>
+					<input type="textbox" id="lname" name="LastName" placeholder="Enter last name:" required></p><br>
+					<div class="errorMessage"></div>
+					</fieldset>
+					
+					<fieldset id="genders" class="text">
+					<p><legend>Gender section</legend></p>
+					<p><label for="gender">Pick your gender:</label><br>
+					Male: <input type="radio" id="gender" name="Gender" value="Male">
+					Female: <input type="radio" id="gender" name="Gender" value="Female" checked>
+					Alien: <input type="radio" id="gender" name="Gender" value="Alien"></p><br>
+					<div class="errorMessage"></div>
+					</fieldset>
+					
+					<fieldset id="ages" class="text">
+					<p><legend>Age section</legend></p>
+					<p><label for="age">What is your age?</label><br>
+					<input type="number" id="age" name="Age" placeholder="18" min="1" max="130" required="required"></p><br>
+					<div class="errorMessage"></div>
+					</fieldset>
+					
+					<fieldset id="petscheck" class="checks">
+					<p><legend>Pets section</legend></p>
+					<p><label for="pets">How many pets do you own?</label><br>
+					0: <input type="checkbox" id="pets" name="HowManyPets" value="0">
+					1: <input type="checkbox" id="pets" name="HowManyPets" value="1">
+					2: <input type="checkbox" id="pets" name="HowManyPets" value="2">
+					3: <input type="checkbox" id="pets" name="HowManyPets" value="3">
+					4: <input type="checkbox" id="pets" name="HowManyPets" value="4"></p><br>
+					<div class="errorMessage"></div>
+					</fieldset>
+					
+					<fieldset id="doctorWho" class="checks">
+					<p><legend>Doctor Who section</legend></p>
+					<p><label for="docwho">Who is your favorite Doctor?</label><br>
+					<select id="docwho" name="FavoriteDoctor" required>
+						<option>Doctor 1: William Hartnell</option>
+						<option>Doctor 2: Patrick Troughton</option>
+						<option>Doctor 3: Jon Pertwee</option>
+						<option>Doctor 4: Tom Baker</option>
+						<option>Doctor 5: Peter Davison</option>
+						<option>Doctor 6: Colin Baker</option>
+						<option>Doctor 7: Sylvester McCoy</option>
+						<option>Doctor 8: Paul McGann</option>
+						<option>War Doctor: John Hurt</option>
+						<option>Doctor 9: Christopher Eccleston</option>
+						<option>Doctor 10: David Tennant</option>
+						<option>Doctor 11: Matt Smith</option>
+						<option>Doctor 12: Peter Capaldi</option>
+					</select></p><br>
+					<div class="errorMessage"></div>
+					</fieldset>
+					
+					<fieldset id="comments" class="text">
+					<p><legend>Custom Text section</legend></p>
+					<p><label for="comment">Comments Text Areas:</label>
+					<input type="checkbox" id="customText" name="SendComment"><br>
+					<textarea id="comment" name="Comment" placeholder="Enter comments here (max 250 characters)" maxlength="250"></textarea></p><br>
+					<div class="errorMessage"></div>
+					</fieldset>
+					
+					<!--
+					<p><label for="slider">Slider for fun</label><br>
+					<input type="range" id="slider" name="FunSlider" min="0" max="10">
+					</p>-->
+					
+					<div id="buttonContainer">
+					<input type="submit" value="Submit Your Will" id="orderButton">
+					<!--<input type="reset" value="Reset Your Will" id="resetForm">-->
+					</div>
+					<br><br><br>
+				</fieldset>
+				<br>
+				
+			</form>
+			<p>Order Form &copy; 1981-2016 Kevin Ward LLC. All Rights Reserved.</p>
+			<br>
+			</div>
+		</article>
+		
+		<footer>
+			<p>&copy; 1981-2016 Kevin Ward. All Rights Reserved.</p>
+		</footer>
+		
+		</div>
+		<script src="jquery-3.1.1.js"></script>
+		<script src="jsq.js"></script>
+		<script src="form.js"></script>
+	</body>
+</html>

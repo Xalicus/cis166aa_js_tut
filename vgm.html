@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<!--
+	CIS166AA: Case Project
+	Author: Kevin Ward
+	Date: 12/3/2016
+	Filename: vgm.html
+	-->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<title>Kevin Ward's Case Project</title>
+		<link rel="stylesheet" href="styles.css">
+		<!-- Adding modernizr JavaScript link. -->
+		<script src="modernizr.custom.05819.js"></script>
+		<script src="modernizr.custom.65897.js"></script>
+	</head>
+	<body>
+		<div id="mainbody">
+			<header>
+				<h1>
+					<a href="index.html"><img src="images/title.jpg" width="200" height="120" alt="Kevin's Hobbies" title="" id="logo1"></a>
+					<img src="images/hyrulecrest.png" width="200" height="120" alt="Kevin's Hobbies" title="" id="logo2">
+					<p>Kevin's Home Page</p>
+				</h1>
+			</header>
+			
+			<nav>
+				<ul class="mainmenu">
+					<li><p>Fun Stuff</p>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="dbzpl.html">DBZ PwrLvl</a></li>
+							<li><a href="docwho.html">Doctor Who</a></li>
+							<li id="currpage"><a href="vgm.html">Games & Movies</a></li>
+							<li><a href="realm.html">WoW Realm List</a></li>
+							<li><a href="time.html">TARDIS Entry</a></li>
+						</ul>
+					</li>
+					<li><p>Forms & Documents</p>
+						<ul>
+							<li><a href="feedback.html">Feedback</a></li>
+							<li><a href="geoloc.html">GeoLocate</a></li>
+							<li><a href="form.html">Random Form</a></li>
+							<li><a href="websec.html">Web Security</a></li>
+							<li><a href="about.html">About Me</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		
+		<aside>
+			<ul>
+				<li onclick="document.getElementById('toonImg').src = crest" id="gold">The Legend of Zelda Crest</li>
+				<li onclick="document.getElementById('toonImg').src = rinku" id="courage">Link, Hero of Courage</li>
+				<li onclick="document.getElementById('toonImg').src = zelda" id="wisdom">Zelda, Princess of Wisdom</li>
+				<li onclick="document.getElementById('toonImg').src = ganon" id="power">Ganon, King of Power</li>
+				<li onclick="document.getElementById('toonImg').src = armor" id="armor">Link from Breath of the Wild</li>
+				<li onclick="document.getElementById('toonImg').src = xal1" id="gold">Xalicus Xander, FFXIV</li>
+				<li onclick="document.getElementById('toonImg').src = xal2" id="gold">Zander Flametouched, GW2</li>
+				<li onclick="document.getElementById('toonImg').src = xal3" id="gold">Xalicus Xander, DDO</li>
+				<li onclick="document.getElementById('toonImg').src = sw" id="gold">Star Wars Logo</li>
+				<li onclick="document.getElementById('toonImg').src = luke" id="gold">Luke Skywalker, Jedi</li>
+				<li onclick="document.getElementById('toonImg').src = leia" id="gold">Leia Organa, Senator</li>
+				<li onclick="document.getElementById('toonImg').src = vader" id="gold">Darth Vader, Sith</li>
+			</ul>	
+		</aside>
+		
+		<article>
+			<figure>
+				<h2><p>Games & Movies</p></h2>
+				<img src="images/title.jpg" width="720" height="480" alt="" title="" id="toonImg">
+				<figcaption>
+					<script>
+						document.write("<p>All characters are copyright of their respective owners.</p>");
+					</script>
+				</figcaption>
+			</figure>
+		</article>
+		
+		<footer>
+			<p>&copy; 1981-2016 Kevin Ward. All Rights Reserved.</p>
+		</footer>
+		
+		</div>
+		<script src="jquery-3.1.1.js"></script>
+		<script src="jsq.js"></script>
+		<script src="javascript.js"></script>
+	</body>
+</html>

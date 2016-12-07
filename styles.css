@@ -1,0 +1,589 @@
+/*
+CIS166AA: Case Project
+Author: Kevin Ward
+Date: 11/30/2016
+Filename: styles.css
+*/
+
+
+/* apply a natural box layout model to all elements */
+* {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/* reset rules */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+	max-width: 1080px;
+	background-color: #FFFFFF;
+	background-image: linear-gradient(#FFFFFF, #FFFFFF, #B5EAAA);
+	background-attachment: fixed;
+	margin: 0 auto;
+	font-family: Verdana, Geneva, sans-serif; 
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+a:link, a:visited {
+	text-decoration: none;
+	color: inherit;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: inherit;
+}
+
+a:active {
+	text-decoration: none;
+	color: inherit;
+}
+
+/* main body of the page */
+#mainbody {
+	background-color: #C3FDB8;
+}
+
+/* header of the page */
+header {
+	background-color: #B5EAAA;
+	width: 100%;
+	height: 125px;
+	font-family: 'Verdana', bold;
+	color: #000000;
+	font-size: 70px;
+	text-align: right;
+	padding-right: 10px;
+	position: relative;
+}
+
+header #logo1 {
+	position: absolute;
+	top: -6px;
+	left: -10px;
+	-webkit-transform: scale(0.8);
+	-moz-transform: scale(0.8);
+	-o-transform: scale(0.8);
+	writing-mode: lr-tb;    
+}
+
+header #logo2 {
+	position: absolute;
+	top: 0;
+	left: 150px;
+	opacity: 1.0;
+}
+
+header h1 p {
+	padding-top: 20px;
+	padding-right: 10px;
+	position: center;
+}
+
+/* navigation of the page */
+nav {
+	float: left;
+	background-color: #41A317;
+	padding: 7px 10px;
+	width: 100%;
+	height: 45px;
+	font-size: 14px;
+	text-align: center;
+	color: #000000;
+}
+
+nav #currpage {
+	background-color: #728C00;
+	padding: 7px 10px;
+	color: #000000;
+}
+
+nav ul {
+	margin-top: 0px;
+	margin-left: 0px;
+	width: 100%;
+	text-align: center;
+}
+
+nav ul li {
+	
+	display: block; /*inline-block;*/
+	padding: 7px 10px;
+	background: #B5EAAA;
+	color: #000000;
+	width: 200px;
+	float: left;
+/*	-moz-border-radius-topleft: 10px;
+	-moz-border-radius-topright: 10px;
+	-webkit-border-top-left-radius: 10px;
+	-webkit-border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;*/
+	opacity: 1.0;
+}
+
+/* the current page being displayed. */
+/*
+nav ul #currpage {
+	background: #728C00;
+	color: #000000;
+}*/
+
+nav ul ul {
+   position: relative;
+   z-index: 10;
+   display: none;
+   background: #B5EAAA /*rgb(33,46,65);*/
+}
+
+nav ul ul.show {
+   display: block;
+}
+
+nav ul ul li {
+   clear: left;
+   text-align: left;
+   line-height: normal;
+   height: auto;
+   padding: 0.4em;
+   border: 2px solid rgb(33,46,65);
+}
+
+nav ul ul li:hover {
+   color: #000000;
+   background: #728C00;
+}
+
+
+/* sidebar */
+aside {
+	width: 260px;
+	float: left;
+	opacity: 1.0;
+}
+
+aside ul {
+	padding: 10px;
+}
+
+aside ul li {
+	padding: 10px;
+	font-size: 18px;
+}
+
+#gold:hover {
+	color: gold;
+	background: rgb(0,0,0);
+}
+
+#courage:hover {
+	color: green;
+	background: rgb(0,0,0);
+}
+
+#wisdom:hover {
+	color: blue;
+	background: rgb(0,0,0);
+}
+
+#power:hover {
+	color: red;
+	background: rgb(0,0,0);
+}
+
+#armor:hover {
+	color: orange;
+	background: rgb(0,0,0);
+}
+
+
+/* main content */
+article {
+	width: 820px;
+	float: right;
+	text-align: center;
+	background-color: #F0FFFF;
+}
+
+article h2 {
+	font-size: 36pt;
+	font-family: "Racing Sans One", garamond, "times new roman", times, serif;
+	font-weight: bold;
+	margin: 5px;
+	color: rgb(46,49,146);
+}
+
+article h3 {
+	font-size: 24pt;
+	font-family: "Racing Sans One", garamond, "times new roman", times, serif;
+	font-weight: bold;
+	margin: 4px;
+	text-align: left;
+	color: rgb(46,49,146);
+}
+
+article h4 {
+	font-size: 14pt;
+	font-family: roboto, arial, helvetica, sans-serif;
+	color: rgb(46,49,146);
+	margin-top: 10px;
+}
+
+article.tut {
+	text-align: left;
+	padding: 10px;
+}
+
+article figure figcaption p {
+	font-size: 16px;
+	color: rgb(150,190,150);
+	padding: 10px 0;
+}
+
+article figure figcaption p a:link {
+	color: rgb(13,177,75);
+}
+
+#loc {
+   min-height: 500px;
+   padding: 0 20px;
+   display: block;
+}
+
+#map {
+   width: 100%;
+   min-height: 480px;
+}
+
+#countupSection {
+	display: none;
+}
+
+#countup {
+	font-weight: bold;
+}
+
+/* calendar */
+#cal {
+	display: none;
+	position: absolute;
+	border: 2px solid rgb(150,50,150);
+	left: 450px;
+	top: 150px;
+	background: green;
+	color: black;
+	padding: 10px;
+	-moz-border-radius-topleft: 10px;
+	-webkit-border-top-left-radius: 10px;
+	border-top-left-radius: 10px;
+	-moz-border-radius-topright: 10px;
+	-webkit-border-top-right-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+#cal table {
+	clear: both;
+}
+
+#cal table caption {
+	font-weight: bold;
+	font-size: 14pt;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background: rgb(150,50,150);
+}
+
+#cal table th {
+	text-align: right;
+}
+
+#cal table th, #cal table td {
+	width: 2em;
+	padding: 4px;
+}
+
+#cal table td {
+	color: rgb(178,184,183);
+	text-align: right;
+	cursor: pointer;
+}
+
+#prev {
+	float: left;
+	padding: 4px;
+	cursor: pointer;
+}
+
+#next {
+	float: right;
+	padding: 4px;
+	cursor: pointer;
+}
+
+#cal table td.futuredate {
+	color: white;
+}
+
+#cal table td.futuredate:hover, #prev:hover, #next:hover, #close:hover {
+	background: rgb(150,50,150);
+	color: black;
+}
+
+#cal table td.pastdate {
+	color: white;
+}
+
+#cal table td.pastdate:hover, #prev:hover, #next:hover, #close:hover {
+	background: rgb(150,50,150);
+	color: black;
+}
+
+#close {
+	color: black;
+	float: right;
+	padding: 0 4px;
+	cursor: pointer;
+}
+
+#close span {
+	font-size: 20pt;
+}
+
+/* Table stuff */
+article table {
+	width: 640px;
+	text-align: center;
+	table-layout: fixed;
+}
+
+article table caption {
+	padding: 5px;
+	width: 300px;
+}
+
+article tr td:first-child, article tr td:last-child {
+	background: #B5EAAA;
+}
+
+article th, article td {
+	border: 2px solid black;
+	border-collapse: collapse;
+	padding: 5px;
+	width: 35%;
+}
+
+article tr td:first-of-type, article tr th:first-of-type {
+	border-left: 1;
+}
+
+article tr td:last-of-type, article tr th:last-of-type {
+	border-right: 1;
+}
+
+article th {
+	font-weight: 700;
+	background: lightblue;
+}
+
+article td p:first-of-type {
+	font-weight: 900;
+	text-align: center;
+}
+
+article div p {
+	color: blue;
+}
+
+article div a:link {
+	color: darkred;
+	font-weight: bold;
+}
+
+
+
+#docwhotable table {
+	width: 640px;
+	text-align: center;
+	table-layout: fixed;
+}
+
+#docwhotable table caption {
+	padding: 5px;
+	width: 300px;
+}
+
+#docwhotable tr td:first-child, #docwhotable tr td:last-child {
+	background: #B5EAAA;
+}
+
+#docwhotable th, #docwhotable td {
+	border: 2px solid black;
+	border-collapse: collapse;
+	padding: 5px;
+	width: 35%;
+}
+
+#docwhotable tr td:first-of-type, #docwhotable tr th:first-of-type {
+	border-left: 1;
+}
+
+#docwhotable tr td:last-of-type, #docwhotable tr th:last-of-type {
+	border-right: 1;
+}
+
+#docwhotable th {
+	font-weight: 700;
+	background: lightblue;
+}
+
+#docwhotable td p:first-of-type {
+	font-weight: 900;
+	text-align: center;
+}
+
+
+/* profile section */
+#profile {
+	float: center;
+	width: 260px;
+	border: 1px solid black;
+	background: green;
+	padding: 20px;
+/*   background: rgb(216,217,219);*/
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	display: none;
+}
+
+#profile li, #profile p {
+	text-indent: 1em;
+	margin-top: 5px;
+}
+
+
+/* form */
+form {
+	width: 820px;
+	margin: 10 auto;
+}
+
+form fieldset{
+	border: 2px; 
+	/*background: green;*/
+	position: relative;
+}
+
+form legend {
+	font-size: 1.5em;
+	font-weight: bold;
+	margin: 10px;
+}
+
+form legend span {
+	position: center;
+	top: 10px;
+}
+
+form label {
+	display: block;
+	font-size: 1.2em;
+	width: 530px;
+	text-align: center;
+}
+
+form label p {
+	float: left;
+	width: 100%;
+	text-align: center;
+}
+
+form label p:nth-child(2) {
+	font-size: 0.8em;
+}
+
+/*
+form input {
+	padding: 1%;
+	background: #333;
+	color: #BBB;
+	border: none;
+	font: normal 1em/1.5em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	float: right;
+	clear: both;
+	width: 100px;
+	margin-left: 10px;
+	margin-bottom: 20px;
+	position: relative;
+	top: -0.4em;
+}*/
+
+form input[type="checkbox"] {
+	position: static;
+}
+
+/* remove blank space for descenders below image */
+article figure img {
+	display: block;
+}
+
+/* footer of the page */
+footer {
+	background: #41A317;
+	width: 100%;
+	clear: both;
+	font-size: 18px;
+	padding: 10px;
+}
+
+footer p {
+	text-align: center;
+}

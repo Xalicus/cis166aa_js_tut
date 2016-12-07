@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<!--
+	CIS166AA: Case Project
+	Author: Kevin Ward
+	Date: 11/30/2016
+	Filename: all.html
+	-->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<title>Kevin Ward's Case Project</title>
+		<link rel="stylesheet" href="styles.css">
+		<!-- Adding modernizr JavaScript link. -->
+		<script src="modernizr.custom.05819.js"></script>
+		<script src="modernizr.custom.65897.js"></script>
+	</head>
+	<body>
+		<div id="mainbody">
+			<header>
+				<h1>
+					<a href="index.html"><img src="images/title.jpg" width="200" height="120" alt="Kevin's Hobbies" title="" id="logo1"></a>
+					<img src="images/hyrulecrest.png" width="200" height="120" alt="Kevin's Hobbies" title="" id="logo2">
+					<p>Everything Page</p>
+				</h1>
+			</header>
+			
+			<nav>
+				<ul class="mainmenu">
+					<li><p><a href="#">Fun Stuff</a></p>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="dbzpl.html">DBZ PwrLvl</a></li>
+							<li><a href="docwho.html">Doctor Who</a></li>
+							<li><a href="vgm.html">Games & Movies</a></li>
+							<li><a href="realm.html">WoW Realm List</a></li>
+							<li><a href="time.html">TARDIS Entry</a></li>
+						</ul>
+					</li>
+					<li><p>Forms & Documents</p>
+						<ul>
+							<li><a href="feedback.html">Feedback</a></li>
+							<li><a href="geoloc.html">GeoLocate</a></li>
+							<li><a href="form.html">Random Form</a></li>
+							<li><a href="websec.html">Web Security</a></li>
+							<li><a href="about.html">About Me</a></li>
+							<li id="currpage"><a href="all.html">All</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		
+		<aside>
+			<ul>
+				<li id="gold"><p>Doctor Who Actors:</p></li>
+				<li id="gold"><p>Your Power Level: <span id="powerlvl"></span></p></li>
+				<li id="gold"><p>Random Form</p></li>
+				<li onclick="document.getElementById('toonImg').src = crest" id="gold">The Legend of Zelda Crest</li>
+				<li onclick="document.getElementById('toonImg').src = rinku" id="courage">Link, Hero of Courage</li>
+				<li onclick="document.getElementById('toonImg').src = zelda" id="wisdom">Zelda, Princess of Wisdom</li>
+				<li onclick="document.getElementById('toonImg').src = ganon" id="power">Ganon, King of Power</li>
+				<li onclick="document.getElementById('toonImg').src = armor" id="armor">Link from Breath of the Wild</li>
+				<li onclick="document.getElementById('toonImg').src = xal1" id="gold">Xalicus Xander, FFXIV</li>
+				<li onclick="document.getElementById('toonImg').src = xal2" id="gold">Zander Flametouched, GW2</li>
+				<li onclick="document.getElementById('toonImg').src = xal3" id="gold">Xalicus Xander, DDO</li>
+				<li onclick="document.getElementById('toonImg').src = sw" id="gold">Star Wars Logo</li>
+				<li onclick="document.getElementById('toonImg').src = luke" id="gold">Luke Skywalker, Jedi</li>
+				<li onclick="document.getElementById('toonImg').src = leia" id="gold">Leia Organa, Senator</li>
+				<li onclick="document.getElementById('toonImg').src = vader" id="gold">Darth Vader, Sith</li>
+			</ul>
+		</aside>
+		
+		<article>
+			<h2>The Doctors from Doctor Who list:</h2>
+			<table>
+			<caption>Classic/Reboot Doctor Who table</caption>
+			<thead>
+				<tr>
+					<th id="clsctitle" name="type"></th>
+					<th name="type"></th>
+					<th id="rebotitle" name="type"></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td name="classic">
+					</td>
+					<td>1
+					</td>
+					<td name="reboot">
+					</td>
+				</tr>
+				<tr>
+					<td name="classic">
+					</td>
+					<td>2
+					</td>
+					<td name="reboot">
+					</td>
+				</tr>
+				<tr>
+					<td name="classic">
+					</td>
+					<td>3
+					</td>
+					<td name="reboot">
+					</td>
+				</tr>
+				<tr>
+					<td name="classic">
+					</td>
+					<td>4
+					</td>
+					<td name="reboot">
+					</td>
+				</tr>
+				<tr>
+					<td name="classic">
+					</td>
+					<td>5
+					</td>
+					<td name="reboot">
+					</td>
+				</tr>
+				<tr>
+					<td name="classic">
+					</td>
+					<td>6
+					</td>
+					<td name="reboot">
+					</td>
+				</tr>
+				<tr>
+					<td name="classic">
+					</td>
+					<td>7
+					</td>
+					<td name="reboot">
+					</td>
+				</tr>
+				<tr>
+					<td name="classic">
+					</td>
+					<td>8
+					</td>
+					<td name="reboot">
+					</td>
+				</tr>
+			</tbody>
+			</table>
+			<br>
+			<p>&copy; <a href="http://www.doctorwho.tv/">Doctor Who</a> copyright holders.</p>
+			<br>
+			
+			<!--<h2>Dragon Ball Z Power Levels</h2>-->
+			<form>
+				<fieldset>
+				<legend><span>Dragon Ball Z Power Levels</span></legend><br>
+					<input type="number" min="1" max="100" id="age" value="18" name="age">
+					<label for="age">
+						<p>Type in your age (18 - 100)</p>
+					</label><br>
+				</fieldset>
+				<br>
+				<fieldset>
+					<input type="checkbox" id="over9k" name="over9k">
+					<label for="over9k">
+						<p>Is your power level Extreme?</p>
+						<p>+9000</p>
+					</label><br>
+				</fieldset>
+				<br>
+				<fieldset>
+					<input type="checkbox" id="alien" name="alien">
+					<label for="alien">
+						<p>If you are an alien check here.</p>
+						<p>+250</p>
+					</label><br>
+				</fieldset>
+				<br>
+			</form>
+			<p>&copy; DragonBall Z copyright holders.</p>
+			<br>
+			
+			<h2>Random Form</h2>			
+			<div>
+			<br>
+			<form action="formdone.html" novalidate="novalidate">
+				<fieldset>
+				<legend><h3><span>Random Form</span></h3></legend><br>
+					
+					<fieldset id="names" class="text">
+					<p><legend>Full Name section</legend></p>
+					<p><label for="fname">First Name:</label><br>
+					<input type="textbox" id="fname" name="FirstName" placeholder="Enter first name:" required>
+					<br><br>
+					
+					<label for="lname">Last Name:</label><br>
+					<input type="textbox" id="lname" name="LastName" placeholder="Enter last name:" required></p><br>
+					<div class="errorMessage"></div>
+					</fieldset>
+					
+					<fieldset id="genders" class="text">
+					<p><legend>Gender section</legend></p>
+					<p><label for="gender">Pick your gender:</label><br>
+					Male: <input type="radio" id="gender" name="Gender" value="Male">
+					Female: <input type="radio" id="gender" name="Gender" value="Female" checked>
+					Alien: <input type="radio" id="gender" name="Gender" value="Alien"></p><br>
+					<div class="errorMessage"></div>
+					</fieldset>
+					
+					<fieldset id="ages" class="text">
+					<p><legend>Age section</legend></p>
+					<p><label for="age">What is your age?</label><br>
+					<input type="number" id="age" name="Age" placeholder="18" min="1" max="130" required="required"></p><br>
+					<div class="errorMessage"></div>
+					</fieldset>
+					
+					<fieldset id="petscheck" class="checks">
+					<p><legend>Pets section</legend></p>
+					<p><label for="pets">How many pets do you own?</label><br>
+					0: <input type="checkbox" id="pets" name="HowManyPets" value="0">
+					1: <input type="checkbox" id="pets" name="HowManyPets" value="1">
+					2: <input type="checkbox" id="pets" name="HowManyPets" value="2">
+					3: <input type="checkbox" id="pets" name="HowManyPets" value="3">
+					4: <input type="checkbox" id="pets" name="HowManyPets" value="4"></p><br>
+					<div class="errorMessage"></div>
+					</fieldset>
+					
+					<fieldset id="doctorWho" class="checks">
+					<p><legend>Doctor Who section</legend></p>
+					<p><label for="docwho">Who is your favorite Doctor?</label><br>
+					<select id="docwho" name="FavoriteDoctor" required>
+						<option>Doctor 1: William Hartnell</option>
+						<option>Doctor 2: Patrick Troughton</option>
+						<option>Doctor 3: Jon Pertwee</option>
+						<option>Doctor 4: Tom Baker</option>
+						<option>Doctor 5: Peter Davison</option>
+						<option>Doctor 6: Colin Baker</option>
+						<option>Doctor 7: Sylvester McCoy</option>
+						<option>Doctor 8: Paul McGann</option>
+						<option>War Doctor: John Hurt</option>
+						<option>Doctor 9: Christopher Eccleston</option>
+						<option>Doctor 10: David Tennant</option>
+						<option>Doctor 11: Matt Smith</option>
+						<option>Doctor 12: Peter Capaldi</option>
+					</select></p><br>
+					<div class="errorMessage"></div>
+					</fieldset>
+					
+					<fieldset id="comments" class="text">
+					<p><legend>Custom Text section</legend></p>
+					<p><label for="comment">Comments Text Areas:</label>
+					<input type="checkbox" id="customText" name="SendComment"><br>
+					<textarea id="comment" name="Comment" placeholder="Enter comments here (max 250 characters)" maxlength="250"></textarea></p><br>
+					<div class="errorMessage"></div>
+					</fieldset>
+
+					<div id="buttonContainer">
+					<input type="submit" value="Submit Your Will" id="orderButton">
+					</div>
+					<br><br><br>
+				</fieldset>
+				<br>
+				
+			</form>
+			<p>Order Form &copy; 1981-2016 Kevin Ward LLC. All Rights Reserved.</p>
+			
+			<figure>
+				<img src="images/title.jpg" width="720" height="480" alt"" title="" id="toonImg" />
+				<figcaption>
+					<script>
+						document.write("<p>All characters are copyright of their respective owners.</p>");
+					</script>
+				</figcaption>
+			</figure>
+			<br>
+		</article>
+		
+		<footer>
+			<p>&copy; 1981-2016 Kevin Ward. All Rights Reserved.</p>
+		</footer>
+		
+		</div>
+		<script src="jquery-3.1.1.js"></script>
+		<script src="jsq.js"></script>
+		<script src="javascript.js"></script>
+		<script src="form.js"></script>
+		<script src="jsdbzpl.js"></script>
+		<script src="js2.js"></script>
+	</body>
+</html>

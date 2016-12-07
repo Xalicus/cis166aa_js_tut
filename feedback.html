@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<!--
+	CIS166AA: Case Project
+	Author: Kevin Ward
+	Date: 11/30/2016
+	Filename: feedback.html
+	-->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<title>Kevin Ward's Case Project</title>
+		<link rel="stylesheet" href="styles.css">
+		<!-- Adding modernizr JavaScript link. -->
+		<script src="modernizr.custom.05819.js"></script>
+		<script src="modernizr.custom.65897.js"></script>
+	</head>
+	<body>
+		<div id="mainbody">
+			<header>
+				<h1>
+					<a href="index.html"><img src="images/title.jpg" width="200" height="120" alt="Kevin's Hobbies" title="" id="logo1"></a>
+					<img src="images/hyrulecrest.png" width="200" height="120" alt="Kevin's Hobbies" title="" id="logo2">
+					<p>Kevin's Home Page</p>
+				</h1>
+			</header>
+			
+			<nav>
+				<ul class="mainmenu">
+					<li><p><a href="#">Fun Stuff</a></p>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="dbzpl.html">DBZ PwrLvl</a></li>
+							<li><a href="docwho.html">Doctor Who</a></li>
+							<li><a href="vgm.html">Games & Movies</a></li>
+							<li><a href="realm.html">WoW Realm List</a></li>
+							<li><a href="time.html">TARDIS Entry</a></li>
+						</ul>
+					</li>
+					<li><p>Forms & Documents</p>
+						<ul>
+							<li id="currpage"><a href="feedback.html">Feedback</a></li>
+							<li><a href="geoloc.html">GeoLocate</a></li>
+							<li><a href="form.html">Random Form</a></li>
+							<li><a href="websec.html">Web Security</a></li>
+							<li><a href="about.html">About Me</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		
+		<aside>
+			<ul>
+				<li><p>Feedback Form: <span id="randomform"></span></p></li>
+				<li><div id="errorText"></div></li>
+				<li><img src="images/pixel.png" width="240" height="190" alt="Error Picture" title="Error Picture" id="errorPic" /></li>
+				
+				<li><section id="profile">
+					<h3>Profile</h3>
+					<div id="unameSection">
+						<h4>Username: </h4>
+						<p id="profileUname"></p>
+					</div>
+					<div id="emailSection">
+						<h4>Email address: </h4>
+						<p id="profileEmail"></p>
+					</div>
+					<div id="cellSection">
+						<h4>Cell Phone: </h4>
+						<p id="profileCell"></p>
+					</div>
+					<div id="genderSection">
+						<h4>Gender: </h4>
+						<p id="profileGender"></p>
+					</div>
+					<div id="ageSection">
+						<h4>Age: </h4>
+						<p id="profileAge"></p>
+					</div>
+					<div id="doctorSection">
+						<h4>Doctor: </h4>
+						<p id="profileDoctor"></p>
+					</div>
+				</section></li>
+			</ul>
+		</aside>
+		
+		<article>			
+			<div>
+			
+			<form novalidate="novalidate">
+				<fieldset>
+				<legend><h2><span>Feedback Form</span></h2></legend><br>
+					
+					<fieldset id="unames" class="text">
+					<p><legend>Username Section</legend></p>
+					<p><label for="uname">Username:</label>
+					<input type="text" id="uname" name="UserName" placeholder="Enter username here:" required></p>
+					<div class="errorMessage"></div>
+					
+					<fieldset id="emails" class="text">
+					<p><legend>Email Address section</legend></p>
+					<p><label for="email">Email Address: </label>
+					<input type="email" id="emailbox" name="Email" placeholder="Enter a valid email address:" required></p>
+					<div class="errorMessage"></div>
+					</fieldset>
+					
+					<fieldset id="cells" class="text">
+					<p><legend>Phone Number section</legend></p>
+					<p><label for="cell">Cell Phone:</label>
+					<input type="textbox" id="cell" name="Cell" placeholder="(###) ###-####" required></p>
+					<div class="errorMessage"></div>
+					</fieldset>
+					
+					<fieldset id="genders" class="text">
+					<p><legend>Gender section</legend></p>
+					<p><label for="gender">Pick your gender:</label>
+					Male: <input type="radio" id="gender" name="Gender" value="Male">
+					Female: <input type="radio" id="gender" name="Gender" value="Female" checked></p>
+					<div class="errorMessage"></div>
+					</fieldset>
+					
+					<fieldset id="ages" class="text">
+					<p><legend>Age section</legend></p>
+					<p><label for="age">What is your age?</label>
+					<input type="number" id="age" name="Age" placeholder="18" min="1" max="130" required="required"></p><br>
+					<div class="errorMessage"></div>
+					</fieldset>
+					
+					<fieldset id="doctorWho" class="checks">
+					<p><legend>Doctor Who section</legend></p>
+					<p><label for="docwho">Who is your favorite Doctor?</label>
+					<select id="docwho" name="FavoriteDoctor" required>
+						<option>Doctor 1: William Hartnell</option>
+						<option>Doctor 2: Patrick Troughton</option>
+						<option>Doctor 3: Jon Pertwee</option>
+						<option>Doctor 4: Tom Baker</option>
+						<option>Doctor 5: Peter Davison</option>
+						<option>Doctor 6: Colin Baker</option>
+						<option>Doctor 7: Sylvester McCoy</option>
+						<option>Doctor 8: Paul McGann</option>
+						<option>War Doctor: John Hurt</option>
+						<option>Doctor 9: Christopher Eccleston</option>
+						<option>Doctor 10: David Tennant</option>
+						<option>Doctor 11: Matt Smith</option>
+						<option>Doctor 12: Peter Capaldi</option>
+					</select></p><br>
+					<div class="errorMessage"></div>
+					</fieldset>
+					
+					<div id="buttonContainer">
+					<input type="submit" value="Submit Your Will" id="orderButton">
+					<br><br>
+					<input type="button" id="submitBtn" value="Submit your feedback" />
+					</div>
+					<br><br><br>
+				</fieldset>
+				<br>
+				
+			</form>
+			<p>Order Form &copy; 1981-2016 Kevin Ward LLC. All Rights Reserved.</p>
+			<br>
+			</div>
+		</article>
+		
+		<footer>
+			<p>&copy; 1981-2016 Kevin Ward. All Rights Reserved.</p>
+		</footer>
+		
+		</div>
+		<script src="jquery-3.1.1.js"></script>
+		<script src="jsq.js"></script>
+		<script src="feedback.js"></script>
+	</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<!--
+	CIS166AA: Case Project
+	Author: Kevin Ward
+	Date: 11/30/2016
+	Filename: formdone.html
+	-->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<title>Kevin Ward's Case Project</title>
+		<link rel="stylesheet" href="styles.css">
+		<!-- Adding modernizr JavaScript link. -->
+		<script src="modernizr.custom.05819.js"></script>
+		<script src="modernizr.custom.65897.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<header>
+				<h1>
+					<a href="index.html"><img src="images/title.jpg" width="200" height="120" alt="Kevin's Hobbies" title="" id="logo1"></a>
+					<img src="images/hyrulecrest.png" width="200" height="120" alt="Kevin's Hobbies" title="" id="logo2">
+					<p>Kevin's Home Page</p>
+				</h1>
+			</header>
+
+			<nav>
+				<ul class="mainmenu">
+					<li><p><a href="#">Fun Stuff</a></p>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="dbzpl.html">DBZ PwrLvl</a></li>
+							<li><a href="docwho.html">Doctor Who</a></li>
+							<li><a href="vgm.html">Games & Movies</a></li>
+							<li><a href="realm.html">WoW Realm List</a></li>
+							<li><a href="time.html">TARDIS Entry</a></li>
+						</ul>
+					</li>
+					<li><p>Forms & Documents</p>
+						<ul>
+							<li><a href="feedback.html">Feedback</a></li>
+							<li><a href="geoloc.html">GeoLocate</a></li>
+							<li id="currpage"><a href="form.html">Random Form</a></li>
+							<li><a href="websec.html">Web Security</a></li>
+							<li><a href="about.html">About Me</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+
+			<aside>
+				<ul>
+					<li><p>Random Form Data: <span id="formdone"></span></p></li>
+				</ul>
+			</aside>
+		</div>
+
+		<article>
+			<h2>Your form has been submitted</h2>
+			<div class="results"><br>
+				<h3>You entered the following data:</h3>
+				<br>
+				
+				<script>
+					var formData = location.search;
+					formData = formData.substring(1, formData.length);
+					while (formData.indexOf("+") !== -1) {
+						formData = formData.replace("+", " ");
+					}
+					formData = decodeURIComponent(formData);
+					var formArray = formData.split("&");
+					for (var i = 0; i < formArray.length; i = i + 1) {
+						document.write("<p>" + formArray[i] + "</p><br>");
+					}
+				</script>
+				<br><br>
+			</div>
+		</article>
+		<footer>
+			<p>&copy; 1981-2016 Kevin Ward. All Rights Reserved.</p>
+		</footer>
+		<script src="jquery-3.1.1.js"></script>
+		<script src="jsq.js"></script>
+	</body>
+</html>
